@@ -26,8 +26,7 @@ fi
 # TODO: check for bower updates?
 if [ ! -d $bower_app ]; then
     status "Installing Bower, this may take a moment. The Bower installation is cached for subsequent runs."
-    # TODO: this fork resolves the sporadic ENOENT / ENOTFOUND errors that occur in Heroku.
-    $node_dir/bin/npm --silent -g install git://github.com/neoziro/bower.git#v1.2.8-patched
+    $node_dir/bin/npm -g install bower
 fi
 
 status "Installing Bower dependencies."
